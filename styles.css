@@ -111,6 +111,7 @@ h2 {
 
 .siteHeader {
     font-family: SwitzerRegular;
+    font-size: 16px;
     color: #555;;
     position: fixed;
     top:5%;
@@ -120,7 +121,7 @@ h2 {
 
 .siteHeader_title {
     font-family: SwitzerMedium;
-    font-size: 30px;
+    font-size: 60px;
     color: #555;
     margin-top: 5px;
     margin-left: 10px;
@@ -140,7 +141,6 @@ h2 {
     padding: 0px;
     margin-left: 10px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    font-size: 14px;
 }
 
 .siteHeader_nav a {
@@ -236,4 +236,13 @@ h2 {
 .fade-in {
     opacity: 0;
     animation: fadeIn 1s ease-in forwards;
+}
+
+@media screen and (max-width: 1280px) {
+    .siteHeader_title {
+        font-size: 30px; /* Adjust font size for mobile screens */
+    }
+    .siteHeader {
+        font-size: 14px;
+    }
 }
