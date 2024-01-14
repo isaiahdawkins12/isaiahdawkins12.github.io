@@ -272,6 +272,11 @@ function draw() {
 	}
 }
 
+function windowResized() {
+	// Resize the canvas when the window is resized
+	resizeCanvas(windowWidth, windowHeight);
+  }
+
 function drawOverPattern() {
 	push();
 	translate(width / 2, height / 2);

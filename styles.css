@@ -25,10 +25,18 @@
 
 body {
     background-color: hsl(0, 0%, 90%);
+    font-size: 14px;
     box-sizing: border-box;
     overflow: hidden;
 }
 
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
 
 h1 {
     font-family: SwitzerRegular;
@@ -103,7 +111,6 @@ h2 {
 
 .siteHeader {
     font-family: SwitzerRegular;
-    font-size: 14px;
     color: #555;;
     position: fixed;
     top:5%;
@@ -162,11 +169,17 @@ h2 {
 
 .siteFooter {
     font-family: SwitzerMedium;
+    /*max-width: 20%;
+    overflow-wrap:break-word;
     font-size: 15px;
     color: #555;;
     position: fixed;
     bottom:5%;
-    right: 6%;
+    right: 6%;*/
+    position: absolute;
+    right: calc(var(--pad)*2);
+    bottom: calc(var(--pad)*2);
+    white-space: nowrap;
 }
 
 
