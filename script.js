@@ -1,12 +1,4 @@
-const splash = document.querySelector('.splash');
-
-/*
-document.addEventListener('DOMContentLoaded', (e)=>{
-    setTimeout(()=>{
-        splash.classList.add('display-none');
-    }, 2000);
-})
-*/
+// splash screen removal
 document.addEventListener('DOMContentLoaded', (e) => {
     // Check if the splash page has been seen before using sessionStorage
     const splash = document.querySelector('.splash');
