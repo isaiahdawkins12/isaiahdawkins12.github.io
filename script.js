@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', (e)=>{
 */
 document.addEventListener('DOMContentLoaded', (e) => {
     // Check if the splash page has been seen before using sessionStorage
+    const splash = document.querySelector('.splash');
     const hasSeenSplash = sessionStorage.getItem('hasSeenSplash');
 
     if (!hasSeenSplash) {
