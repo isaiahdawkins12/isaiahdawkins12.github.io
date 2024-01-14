@@ -1,0 +1,274 @@
+@font-face {
+    font-family: Switzer;
+    src: url(Fonts/Switzer-Extralight.otf);
+}
+
+@font-face {
+    font-family: SwitzerItalic;
+    src: url(Fonts/Switzer-ExtralightItalic.otf);
+}
+
+@font-face {
+    font-family: SwitzerRegular;
+    src: url(Fonts/Switzer-Regular.otf);
+}
+
+@font-face {
+    font-family: SwitzerThin;
+    src: url(Fonts/Switzer-Thin.otf);
+}
+
+@font-face {
+    font-family: SwitzerMedium;
+    src: url(Fonts/Switzer-Medium.otf);
+}
+
+body {
+    background-color: hsl(0, 0%, 90%);
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+h1 {
+    font-family: SwitzerRegular;
+    color:hsl(0, 0%, 10%);
+}
+
+h2 {
+    font-family: SwitzerRegular;
+    color:hsl(0, 0%, 10%);
+}
+
+#Page {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /* overflow: hidden; */
+    background-color: var(--c-bg);
+    color: #fff;
+    white-space: nowrap;
+    transition-property: background-color;
+    transition-duration: .9s;
+    transition-timing-function: cubic-bezier(0.1, 0.4, 0.2, 1);
+    box-sizing: border-box;
+
+}
+
+.frame {
+    position: relative;
+    width: 90%;
+    height: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.frame_line {
+    position: absolute;
+    background-color: hsl(0, 0%, 10%);
+    opacity: .5;
+}
+
+.frame_line-left {
+    left: 0;
+    top: 0;
+    width: 1px;
+    height: 100%;
+}
+
+.frame_line-right {
+    right: 0;
+    top: 0;
+    width: 1px;
+    height: 100%;
+}
+
+.frame_line-top {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 1px;
+}
+
+.frame_line-bottom {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+}
+
+.siteHeader {
+    font-family: SwitzerRegular;
+    color: #555;;
+    position: fixed;
+    top:5%;
+    left: 5%;
+    
+}
+
+.siteHeader_title {
+    font-family: SwitzerMedium;
+    font-size: 60px;
+    color: #555;;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-bottom: 0;
+
+}
+
+.siteHeader_label{
+    margin-left: 10px;
+    margin-top: 0px;
+}
+
+.siteHeader_nav ul {
+    list-style-type: none;
+    font-family: SwitzerRegular;
+    color: #555;;
+    padding: 0px;
+    margin-left: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 17px;
+}
+
+.siteHeader_nav a {
+    color: #555;;
+    text-decoration: none;
+    transition: all 0.1s ease-in;
+}
+
+.siteHeader_nav li { 
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+.siteHeader_nav li i { 
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+
+.siteHeader_nav li:hover a{
+    color:hsl(0, 0%, 50%);
+    letter-spacing: 12px;
+}
+
+#is_selected {
+    color: gold;
+}
+
+.siteFooter {
+    font-family: SwitzerMedium;
+    font-size: 15px;
+    color: #555;;
+    position: fixed;
+    bottom:5%;
+    right: 6%;
+}
+
+
+.intro {
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: hsl(0, 0%, 90%);
+    transition: 1s;
+}
+
+/*
+.logo-header {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: hsl(0, 0%, 10%);
+}
+
+.logo {
+    position: relative;
+    display: inline-block;
+    bottom: -20%;
+    opacity: 0;
+}
+
+.logo-active {
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+}
+
+.logo-fade {
+    bottom: 150px;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+}
+*/
+
+.splash h1 .logo {
+    font-family:SwitzerThin;
+}
+.splash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /*hiding fractal*/
+    background-color: hsl(0, 0%, 90%);
+    z-index: 200;
+    color: hsl(0, 0%, 10%);
+    text-align: center;
+    line-height: 90vh;
+}
+
+.splash.display-none {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /*hiding fractal*/
+    background-color: hsl(0, 0%, 90%);
+    z-index: -10;
+    color: hsl(0, 0%, 10%);
+    text-align: center;
+    line-height: 90vh;
+    pointer-events: none;
+    transition: all 0.5s;
+}
+
+@keyframes fadeIn {
+    to{
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+}
+/* #IntroScene {
+    z-index: 1;
+    font-family: Switzer;
+    font-feature-settings: "tnum", "liga";
+    letter-spacing: 2px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: hsl(0, 0%, 90%);
+    color: hsl(0, 0%, 10%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 1s ease-in-out 0s;
+    box-sizing: border-box;
+    pointer-events: none;
+}
+*/
