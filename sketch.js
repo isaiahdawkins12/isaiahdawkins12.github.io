@@ -101,7 +101,7 @@ function draw() {
 		stroke(str(random(colors)) + "1a");
 		noFill();
 		drawingContext.setLineDash([1, 1, 1, 1]);
-		drawOverPattern();
+		// drawOverPattern();
 		image(overAllTexture, 0, 0);
 		// noLoop();
 		noFill();
